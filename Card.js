@@ -1,4 +1,4 @@
-const content = [
+ exportconst content = [
     {
         id: 1,
         title: "cross course project",
