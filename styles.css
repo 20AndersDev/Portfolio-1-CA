@@ -18,7 +18,7 @@
 }
 
 .profile-picture{
-    position: fixed;
+    position: absolute;
     top: 100px;
     height: 200px;
     width: 200px;
@@ -39,18 +39,68 @@
     align-items: center;
 }
 
-.div-blogcard{
+.container-cards{
     display: flex;
+    flex-direction: column;
     width: 100%;
-    height: 100px;
     justify-content: center;
+    gap: 30px;
 }
 
-.blogcard{
+.blog-card{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column wrap;
+    height: 600px;
+    width: 100%;
+    border-radius: 10px;
+}
+
+
+/* carstyling */
+
+.image-container{
+    justify-content: center;
     display: flex;
     width: 100%;
-    max-width: 1200px;
-    height:150px;
-    border: solid 1px black;;    
+    max-width: 750px;
+    height: 450px;
+    border-radius: 10px 10px 10px 10px;
+    overflow: hidden;
+}
+
+.contentContainer{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
     border-radius: 10px;
+    background-color: white;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+}
+
+.screenshot{
+    object-fit: cover;
+    width: 100%;
+    max-width: 750px;
+    height: 100%;
+    border-radius: 10px 10px 10px 10px;
+}
+
+.icons{
+    display: flex;
+    gap: 10px;
+}
+
+.fa-html5{
+    color: #E34F26;
+    font-size: 75px;
+}
+.fa-css3-alt{
+    color: #1572B6;
+    font-size: 75px;
+}
+.fa-js{
+    color: #F7DF1E;
+    font-size: 75px;
 }
