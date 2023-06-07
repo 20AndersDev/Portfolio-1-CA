@@ -1,13 +1,27 @@
 *{
     padding: 0;
     margin: 0;;
+    
+}
+body{background: #0f0c29;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: white;
+    }
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
 }
 
 .div-header{
      width: 100%;
-     height: 200px;
+     height: 100px;
      display: flex;
-     background-color: rgb(17, 38, 101);
 }
 
 .div-profile-picture{
@@ -17,22 +31,12 @@
     justify-content: center;
 }
 
-.profile-picture{
-    position: absolute;
-    top: 100px;
-    height: 200px;
-    width: 200px;
-    border: solid 1px black;
-    border-radius: 100%;
-    display: flex;
-    justify-content: center;
-    background-color: black;
-
-}
 
 .div-titles{
+    padding: 20px;
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    max-width: 170px;
     width: 100%;
     height: 100px;
     justify-content: center;
@@ -41,19 +45,25 @@
 
 .container-cards{
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     width: 100%;
+    max-width: 1200px;
     justify-content: center;
-    gap: 30px;
+    gap: 200px;
 }
 
 .blog-card{
     display: flex;
-    justify-content: space-evenly;
-    flex-direction: column wrap;
-    height: 600px;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: 100%;
     width: 100%;
+    max-width: 750px;
     border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+    color: black;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
 }
 
 
@@ -63,20 +73,24 @@
     justify-content: center;
     display: flex;
     width: 100%;
-    max-width: 750px;
+    max-width: 800px;
     height: 450px;
-    border-radius: 10px 10px 10px 10px;
+    border-radius: 10px 10px 0px 0px;
+    border: solid 1px black;
     overflow: hidden;
 }
 
-.contentContainer{
+.content-container{
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
     width: 100%;
+    max-width: 350px;
+    gap: 70px;
     height: 100%;
     border-radius: 10px;
-    background-color: white;
-    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+    text-align: center;
+    
 }
 
 .screenshot{
@@ -84,7 +98,6 @@
     width: 100%;
     max-width: 750px;
     height: 100%;
-    border-radius: 10px 10px 10px 10px;
 }
 
 .icons{
@@ -94,13 +107,21 @@
 
 .fa-html5{
     color: #E34F26;
-    font-size: 75px;
+    font-size: 55px;
 }
 .fa-css3-alt{
     color: #1572B6;
-    font-size: 75px;
+    font-size: 55px;
 }
 .fa-js{
     color: #F7DF1E;
-    font-size: 75px;
+    font-size: 55px;
+}
+
+.title{
+    display: flex;
+}
+
+.description{
+    width: 400px;
 }

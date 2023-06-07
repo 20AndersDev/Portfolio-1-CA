@@ -25,21 +25,12 @@ content.forEach(item => {
   title.classList.add("title");
   contentContainer.appendChild(title);
 
+  
+
   const description = document.createElement("p");
   description.textContent = item.description;
   description.classList.add("description");
   contentContainer.appendChild(description);
-
-  const iconsDiv = document.createElement("div");
-  iconsDiv.classList.add("icons");
-
-  item.icons.forEach(iconClass => {
-    const icon = document.createElement("i");
-    icon.classList.add("fab", iconClass); 
-    iconsDiv.appendChild(icon);
-  });
-  
-  contentContainer.appendChild(iconsDiv);
 
   const githubLink = document.createElement("a");
   githubLink.href = item.githubrepo;
@@ -54,6 +45,17 @@ content.forEach(item => {
   netlifyLink.textContent = "Hosted on Netlify";
   netlifyLink.classList.add("netlify-link");
   contentContainer.appendChild(netlifyLink);
+
+  const iconsDiv = document.createElement("div");
+  iconsDiv.classList.add("icons");
+
+  item.icons.forEach(iconClass => {
+    const icon = document.createElement("i");
+    icon.classList.add("fab", iconClass); 
+    iconsDiv.appendChild(icon);
+  });
+
+  contentContainer.appendChild(iconsDiv);
 
   blogCard.appendChild(contentContainer);
 
