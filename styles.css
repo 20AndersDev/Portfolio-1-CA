@@ -1,6 +1,8 @@
 *{
     padding: 0;
-    margin: 0;;
+    margin: 0;
+    Font-family: Bodoni MT;
+    font-size: 20px;
     
 }
 body{background: #0f0c29;  /* fallback for old browsers */
@@ -15,7 +17,28 @@ main{
     align-items: center;
     width: 100%;
     height: 100%;
-    padding: 20px;
+
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    height: 500px;
+    align-items: center;
+    justify-content: center;
+}
+
+a{
+    justify-content: center;
+    display: flex;
+    width: 100%;
+    max-width: 200px;
+    height: 50px;
+}
+footer{
+    height: 100px;
 }
 
 .div-header{
@@ -24,11 +47,34 @@ main{
      display: flex;
 }
 
-.div-profile-picture{
+.profile-picture{
+    justify-content: center;
+    display: flex;
+    background-color: rgb(255, 255, 255);
+    border: solid 10px rgb(56, 55, 55);
+    border-radius: 100%;
+    width: 100%;
+    height: 100%;
+    max-width: 300px;
+    max-height: 300px;
+    justify-content: center;
+}
+
+.profile{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+}
+
+
+.div-github-logo{
+    justify-content: center;
     display: flex;
     width: 100%;
-    height: 150px;
-    justify-content: center;
+    max-width: 100px;
+    height: 50px;
+
 }
 
 
@@ -36,11 +82,39 @@ main{
     padding: 20px;
     display: flex;
     flex-wrap: wrap;
-    max-width: 170px;
+    max-width: 400px;
     width: 100%;
     height: 100px;
     justify-content: center;
     align-items: center;
+    gap: 20px;
+}
+
+.title-aboutme{
+    font-size: 50px;
+}
+
+.email-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    max-width: 400px;
+    height: 100px;
+    background-color: #302b63;
+    border-radius: 10px;
+}
+
+.email-logo{
+    width: 50px;
+    height: 50px;
+}
+
+.aboutme-p{
+    display: flex; 
+    text-align: center;
+    width: 100%;
 }
 
 .container-cards{
@@ -50,9 +124,10 @@ main{
     max-width: 1200px;
     justify-content: center;
     gap: 200px;
+    margin-top: 400px;
 }
 
-.blog-card{
+.blog-card {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -62,9 +137,15 @@ main{
     border-radius: 10px;
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
     color: black;
-    background-color: rgb(255, 255, 255);
+    background-color: #ffffff;
     text-align: center;
-}
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .blog-card:hover {
+    box-shadow: 0px 0px 30px 10px rgba(0, 0, 0, 0.75);
+  }
+  
 
 
 /* carstyling */
@@ -85,11 +166,12 @@ main{
     flex-wrap: wrap;
     justify-content: center;
     width: 100%;
-    max-width: 350px;
-    gap: 70px;
+    max-width: 300px;
+    gap: 30px;
     height: 100%;
     border-radius: 10px;
     text-align: center;
+    filter:brightness(1);
     
 }
 
@@ -105,23 +187,31 @@ main{
     gap: 10px;
 }
 
-.fa-html5{
-    color: #E34F26;
-    font-size: 55px;
-}
-.fa-css3-alt{
-    color: #1572B6;
-    font-size: 55px;
-}
-.fa-js{
-    color: #F7DF1E;
-    font-size: 55px;
+.icon{
+    width: 50px;
+    height: 50px;
 }
 
 .title{
+    justify-content: center;
+    font-size: 35px;
+    width: 100%;
     display: flex;
 }
 
 .description{
     width: 400px;
+}
+
+@media (max-width: 820px) {
+    .blog-card{
+        width: 85%;
+    }
+
+    .profile-picture{
+        width: 200px;
+        height: 200px;
+        justify-content: center;
+    }
+    
 }

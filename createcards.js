@@ -25,8 +25,6 @@ content.forEach(item => {
   title.classList.add("title");
   contentContainer.appendChild(title);
 
-  
-
   const description = document.createElement("p");
   description.textContent = item.description;
   description.classList.add("description");
@@ -49,9 +47,10 @@ content.forEach(item => {
   const iconsDiv = document.createElement("div");
   iconsDiv.classList.add("icons");
 
-  item.icons.forEach(iconClass => {
-    const icon = document.createElement("i");
-    icon.classList.add("fab", iconClass); 
+  item.icons.forEach(iconURL => {
+    const icon = document.createElement("img");
+    icon.src = iconURL;
+    icon.classList.add("icon");
     iconsDiv.appendChild(icon);
   });
 
